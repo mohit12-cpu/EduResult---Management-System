@@ -7,7 +7,11 @@ export default defineConfig(({ mode }) => {
     return {
       server: {
         port: 3000,
-        host: '0.0.0.0',
+        host: true,
+        allowedHosts: [
+          'eduresult-management-system-production.up.railway.app',
+          'localhost'
+        ]
       },
       plugins: [react()],
       define: {
